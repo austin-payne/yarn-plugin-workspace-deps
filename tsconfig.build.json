@@ -1,0 +1,18 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        // Project options
+        "lib": ["es2018"],
+        "target": "es2018",
+        "noEmit": false,
+
+        // Module resolution
+        "module": "commonjs",
+
+        // Transpilation
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "downlevelIteration": true
+    }
+}
