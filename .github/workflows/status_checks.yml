@@ -6,16 +6,13 @@ on:
 
 jobs:
   status-checks:
-    name: Run - yarn ${{ matrix.command }}
+    name: ${{ matrix.command }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
         command: ["constraints", "typecheck:all"]
     steps:
       - uses: actions/checkout@v2.3.4
-        with:
-          ref: master
-      - run: git fetch origin master:master --depth 1
       - uses: actions/setup-node@v2.4.0
         with:
           node-version: 14
