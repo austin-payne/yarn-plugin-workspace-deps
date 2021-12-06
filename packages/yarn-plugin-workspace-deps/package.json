@@ -6,7 +6,7 @@
         "url": "ssh://git@github.com/austin-payne/yarn-plugins.git",
         "directory": "packages/yarn-plugin-workspace-deps"
     },
-    "license": "MIT",
+    "license": "UNLICENSED",
     "main": "src/index.ts",
     "files": [
         "src",
