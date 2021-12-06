@@ -10,6 +10,7 @@
         "package:build": "cd $INIT_CWD && rm -rf dist && tsc -p tsconfig.build.json --outDir dist",
         "package:publish": "cd $INIT_CWD && yarn version minor && yarn npm publish",
         "package:typecheck": "cd $INIT_CWD && tsc --noEmit",
+        "plugin:build": "cd $INIT_CWD && builder build plugin",
         "prettify": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,less}\" --ignore-path .prettierignore",
         "typecheck:all": "yarn workspaces foreach -Apv run typecheck",
         "typecheck:changed": "yarn changed foreach -pv --git-range master run typecheck"
@@ -19,6 +20,7 @@
     },
     "devDependencies": {
         "@types/node": "^16.11.11",
+        "@yarnpkg/builder": "3.1.0",
         "husky": "^7.0.4",
         "import-sort-parser-typescript": "^6.0.0",
         "import-sort-style-eslint": "^6.0.0",
